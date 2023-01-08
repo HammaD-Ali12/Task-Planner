@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:visual_planner/helper/helper.dart';
 
 class WideFilledButton extends StatelessWidget {
   const WideFilledButton({Key? key, required this.btnText, required this.onTap})
@@ -15,7 +14,7 @@ class WideFilledButton extends StatelessWidget {
       child: Container(
         height: Get.height * 0.06,
         width: double.infinity,
-        decoration: BoxDecoration(color: Colors.black
+        decoration: const BoxDecoration(color: Colors.black
             // borderRadius: BorderRadius.circular(15),
             ),
         child: Center(

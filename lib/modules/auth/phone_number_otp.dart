@@ -7,8 +7,8 @@ import 'package:visual_planner/modules/common/common_text_field.dart';
 import 'package:visual_planner/modules/common/wide_filled_button.dart';
 import 'package:visual_planner/routes/routes.dart';
 
-class ForgotPassword extends StatelessWidget {
-  ForgotPassword({Key? key}) : super(key: key);
+class ForgotPasswordPhone extends StatelessWidget {
+  ForgotPasswordPhone({Key? key}) : super(key: key);
   final TextEditingController emailController = TextEditingController();
 
   @override
@@ -82,8 +82,8 @@ class ForgotPassword extends StatelessWidget {
                   height: 30,
                 ),
                 CommonTextField(
-                  icon: Icons.email,
-                  hintText: "Email Address",
+                  icon: Icons.phone,
+                  hintText: "Enter Phone Number ",
                   controller: emailController,
                 ),
                 const SizedBox(

@@ -30,9 +30,9 @@ class onBoadingPage extends StatelessWidget {
           ),
           Text(
             model.CounterText,
-            style: TextStyle(fontSize: 17),
+            style: const TextStyle(fontSize: 17),
           ),
-          SizedBox(
+          const SizedBox(
             height: 80.0,
           ),
         ],

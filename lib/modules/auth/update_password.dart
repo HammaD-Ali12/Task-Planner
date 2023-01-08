@@ -15,8 +15,9 @@ class UpdatePassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 162, 224, 214),
+      // backgroundColor: const Color.fromARGB(255, 162, 224, 214),
       body: SafeArea(
         child: Container(
           height: Get.height,
@@ -53,41 +54,51 @@ class UpdatePassword extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 30.0),
-                    child: Text(
-                      "Update Password",
-                      style: GoogleFonts.ubuntu(
-                          color: primaryColor,
-                          fontSize: 28,
-                          fontWeight: FontWeight.w600),
+                    child: Center(
+                      child: Text(
+                        "Update Password",
+                        style: GoogleFonts.ubuntu(
+                            color: primaryColor,
+                            fontSize: 28,
+                            fontWeight: FontWeight.w600),
+                      ),
                     ),
                   ),
-                  Text(
-                    "Enter your new password.",
-                    style: GoogleFonts.ubuntu(
-                        // color: Colors.black54,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w500),
+                  Center(
+                    child: Text(
+                      "Enter your new password.",
+                      style: GoogleFonts.ubuntu(
+                          // color: Colors.black54,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500),
+                    ),
                   ),
                   const SizedBox(
                     height: 30,
                   ),
                   CommonTextField(
-                    icon: Icons.password,
+                    icon: Icons.fingerprint,
                     hintText: "New Password",
                     controller: newPasswordController,
                   ),
                   CommonTextField(
-                    icon: Icons.password,
+                    icon: Icons.fingerprint,
                     hintText: "Confirm New Password",
                     controller: confirmPasswordController,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 60.0, left: 60.0),
-                    child: WideFilledButton(
-                        btnText: "Update Password",
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  Center(
+                    child: SizedBox(
+                      width: size.width * 0.9,
+                      child: WideFilledButton(
+                        btnText: "Next",
                         onTap: () {
-                          Get.toNamed(Routes.successScreen);
-                        }),
+                          Get.toNamed(Routes.login);
+                        },
+                      ),
+                    ),
                   ),
                 ],
               ),

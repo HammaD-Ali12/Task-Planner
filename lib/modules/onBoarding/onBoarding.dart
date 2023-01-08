@@ -1,16 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:visual_planner/helper/helper.dart';
-import 'package:visual_planner/helper/onBoardingModels.dart';
-import 'package:visual_planner/modules/common/wide_filled_button.dart';
-import 'package:visual_planner/modules/common/wide_outlined_button.dart';
 import 'package:visual_planner/modules/controllers/onBoardingController.dart';
 import 'package:visual_planner/routes/routes.dart';
-
-import '../common/onBoardingWidget.dart';
 
 class onBoarding extends StatelessWidget {
   onBoarding({super.key});
@@ -27,7 +20,7 @@ class onBoarding extends StatelessWidget {
             pages: BoardingController.pages,
             liquidController: BoardingController.controller,
             onPageChangeCallback: BoardingController.onPageChangeCallback,
-            slideIconWidget: Icon(Icons.arrow_back_ios),
+            slideIconWidget: const Icon(Icons.arrow_back_ios),
             enableSideReveal: true,
           ),
           Positioned(
@@ -36,17 +29,17 @@ class onBoarding extends StatelessWidget {
               onPressed: () => BoardingController.animatedToNextSlide(),
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.white,
-                side: BorderSide(color: Colors.black26),
-                shape: CircleBorder(),
-                padding: EdgeInsets.all(20),
+                side: const BorderSide(color: Colors.black26),
+                shape: const CircleBorder(),
+                padding: const EdgeInsets.all(20),
               ),
               child: Container(
-                padding: EdgeInsets.all(20.0),
-                decoration: BoxDecoration(
+                padding: const EdgeInsets.all(20.0),
+                decoration: const BoxDecoration(
                   color: Colors.black,
                   shape: BoxShape.circle,
                 ),
-                child: Icon(Icons.arrow_forward_ios),
+                child: const Icon(Icons.arrow_forward_ios),
               ),
             ),
           ),
@@ -57,7 +50,7 @@ class onBoarding extends StatelessWidget {
               onPressed: () {
                 Get.toNamed(Routes.welcomeScreen);
               },
-              child: Text(
+              child: const Text(
                 "Skip",
                 style: TextStyle(color: Colors.grey),
               ),
@@ -69,7 +62,7 @@ class onBoarding extends StatelessWidget {
               child: AnimatedSmoothIndicator(
                 activeIndex: BoardingController.currentPageIndex.value,
                 count: 7,
-                effect: WormEffect(
+                effect: const WormEffect(
                   activeDotColor: Color(0xff272727),
                   dotHeight: 5.0,
                 ),

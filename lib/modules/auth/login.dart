@@ -9,7 +9,6 @@ import 'package:visual_planner/modules/common/wide_outlined_button.dart';
 import 'package:visual_planner/routes/routes.dart';
 
 import 'forget_paswword_options/forget_opt_bottom_sheet.dart';
-import 'forget_paswword_options/forget_pass_option_btn.dart';
 
 class Login extends StatelessWidget {
   Login({Key? key}) : super(key: key);
@@ -24,7 +23,7 @@ class Login extends StatelessWidget {
       //backgroundColor: Color.fromARGB(255, 162, 224, 214),
       body: SafeArea(
         child: Container(
-          padding: EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(10.0),
           height: Get.height,
           width: Get.width,
           //color: Colors.white,
@@ -57,11 +56,13 @@ class Login extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Image(
-                    image: AssetImage(
-                      "assets/images/logo.png",
+                  Center(
+                    child: Image(
+                      image: const AssetImage(
+                        "assets/images/happy.png",
+                      ),
+                      height: size.height * 0.2,
                     ),
-                    height: size.height * 0.2,
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 30.0),
@@ -120,7 +121,7 @@ class Login extends StatelessWidget {
                     child: WideFilledButton(
                       btnText: "Login",
                       onTap: () {
-                        Get.toNamed(Routes.homeScreen);
+                        Get.toNamed(Routes.dashboard);
                       },
                     ),
                   ),
@@ -129,17 +130,17 @@ class Login extends StatelessWidget {
                   ),
                   Column(
                     children: [
-                      Text(
+                      const Text(
                         "OR",
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       WideOutlinedButton(
                         btnText: "Google",
                         onTap: () {
-                          Get.toNamed(Routes.homeScreen);
+                          Get.toNamed(Routes.dashboard);
                         },
                       ),
                     ],
@@ -157,7 +158,7 @@ class Login extends StatelessWidget {
                   //     },
                   //   ),
                   // ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Row(

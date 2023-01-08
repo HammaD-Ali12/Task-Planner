@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:visual_planner/helper/dashboard_theme.dart';
 import 'package:visual_planner/routes/routes.dart';
 
 class MyApp extends StatelessWidget {
@@ -9,6 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Task Planner',
+      // theme: AppTheme.basic,
       theme: ThemeData(
         brightness: Brightness.light,
         primarySwatch: Colors.grey,

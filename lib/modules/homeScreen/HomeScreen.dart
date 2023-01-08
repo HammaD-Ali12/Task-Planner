@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-
 import '../../routes/routes.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -11,14 +9,14 @@ class WelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Color(0xFFFFE400),
+      backgroundColor: const Color(0xFFFFE400),
       body: Container(
-        padding: EdgeInsets.all(30),
+        padding: const EdgeInsets.all(30),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Image.asset(
-              "assets/images/logo.png",
+              "assets/images/happy-2.png",
               height: height * 0.5,
             ),
             Column(
@@ -42,15 +40,15 @@ class WelcomeScreen extends StatelessWidget {
                       Get.toNamed(Routes.login);
                     },
                     style: OutlinedButton.styleFrom(
-                      shape: RoundedRectangleBorder(),
+                      shape: const RoundedRectangleBorder(),
                       foregroundColor: Colors.black,
-                      side: BorderSide(color: Colors.black),
-                      padding: EdgeInsets.symmetric(vertical: 15.0),
+                      side: const BorderSide(color: Colors.black),
+                      padding: const EdgeInsets.symmetric(vertical: 15.0),
                     ),
-                    child: Text("LOGIN"),
+                    child: const Text("LOGIN"),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 Expanded(
@@ -59,13 +57,13 @@ class WelcomeScreen extends StatelessWidget {
                       Get.toNamed(Routes.signUp);
                     },
                     style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(),
+                      shape: const RoundedRectangleBorder(),
                       foregroundColor: Colors.white,
                       backgroundColor: Colors.black,
-                      side: BorderSide(color: Colors.black),
-                      padding: EdgeInsets.symmetric(vertical: 15.0),
+                      side: const BorderSide(color: Colors.black),
+                      padding: const EdgeInsets.symmetric(vertical: 15.0),
                     ),
-                    child: Text("SIGNUP"),
+                    child: const Text("SIGNUP"),
                   ),
                 ),
               ],

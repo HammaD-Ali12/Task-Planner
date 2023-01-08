@@ -23,7 +23,7 @@ class _SuccessScreenState extends State<SuccessScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 162, 224, 214),
+      backgroundColor: const Color.fromARGB(255, 162, 224, 214),
       body: SafeArea(
         child: Container(
           height: Get.height,

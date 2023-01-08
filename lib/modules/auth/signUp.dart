@@ -24,7 +24,7 @@ class SignUp extends StatelessWidget {
       //backgroundColor: Color.fromARGB(255, 162, 224, 214),
       body: SafeArea(
         child: Container(
-          padding: EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(10.0),
           height: Get.height,
           width: Get.width,
           // color: Colors.white,
@@ -59,8 +59,8 @@ class SignUp extends StatelessWidget {
                   ),
                   Center(
                     child: Image(
-                      image: AssetImage(
-                        "assets/images/logo.png",
+                      image: const AssetImage(
+                        "assets/images/happy.png",
                       ),
                       height: size.height * 0.15,
                     ),
@@ -107,24 +107,29 @@ class SignUp extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 30.0),
-                    child: WideFilledButton(btnText: "Sign Up", onTap: () {}),
+                    child: WideFilledButton(
+                      btnText: "Sign Up",
+                      onTap: () {
+                        Get.toNamed(Routes.login);
+                      },
+                    ),
                   ),
                   const SizedBox(
                     height: 5,
                   ),
                   Column(
                     children: [
-                      Text(
+                      const Text(
                         "OR",
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       WideOutlinedButton(
                         btnText: "Google",
                         onTap: () {
-                          Get.toNamed(Routes.homeScreen);
+                          Get.toNamed(Routes.dashboard);
                         },
                       ),
                     ],
